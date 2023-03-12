@@ -1,18 +1,16 @@
 <script setup lang="ts">
-import {increment} from "./increment"
+import { increment } from "./increment"
 import { ref } from 'vue'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
 
-console.log('increment', increment)
 function handleClick() {
-  console.log('clicked', increment)
-  increment()({button: '+', count: 1})
-  count.value++
+  increment({button: '+', count: count.value}).then((res) => {
+    count.value = res.count 
+  })
 }
-
 </script>
 
 <template>

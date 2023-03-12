@@ -1,7 +1,7 @@
 import vue from '@vitejs/plugin-vue';
 import { defineCommon, defineVite } from 'qgp';
 import checker from 'vite-plugin-checker';
-import { bling } from '@qgp-js/bling/vite';
+import { bling } from '@tanstack/bling/vite';
 
 export const common = defineCommon({
 	vite: {

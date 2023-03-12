@@ -16,7 +16,7 @@
   "dependencies": {
     "@astrojs/vercel": "^3.2.0",
     "@astrojs/vue": "^2.1.0",
-    "@qgp-js/bling": "^0.4.3",
+    "@tanstack/bling": "^0.4.3",
     "@solidjs/router": "^0.7.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "astro": "^2.1.0",
