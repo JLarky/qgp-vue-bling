@@ -1,9 +1,12 @@
 import vue from '@vitejs/plugin-vue';
 import { defineCommon, defineVite } from 'qgp';
 import checker from 'vite-plugin-checker';
+import { bling } from '@qgp-js/bling/vite';
 
 export const common = defineCommon({
-	vite: {},
+	vite: {
+		plugins: [bling()],
+	},
 });
 
 export default defineVite(common, {
@@ -14,5 +17,10 @@ export default defineVite(common, {
 			overlay: { initialIsOpen: false },
 		}),
 	],
-	server: { port: 5173 },
+	server: {
+		port: 5173,
+		proxy: {
+			'/_m': 'http://localhost:3000/',
+		},
+	},
 });
