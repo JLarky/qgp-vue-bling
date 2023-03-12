@@ -1,5 +1,4 @@
-// @ts-check
-import solid from 'vite-plugin-solid';
+import vue from '@vitejs/plugin-vue';
 import { defineCommon, defineVite } from 'qgp';
 import checker from 'vite-plugin-checker';
 
@@ -9,7 +8,7 @@ export const common = defineCommon({
 
 export default defineVite(common, {
 	plugins: [
-		solid(),
+		vue(),
 		checker({
 			typescript: true,
 			overlay: { initialIsOpen: false },

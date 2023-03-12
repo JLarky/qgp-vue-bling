@@ -1,6 +1,5 @@
-/* @refresh reload */
-import { render } from 'solid-js/web';
+import { createApp } from './vue';
 
-import { App } from './solid';
+const { app } = createApp();
 
-render(() => <App />, document.getElementById('root') as HTMLElement);
+app.mount('#app');
